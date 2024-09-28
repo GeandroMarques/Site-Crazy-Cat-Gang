@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira Condensed", sans-serif;
+}
+body{
+    background: url(https://www.creativefabrica.com/wp-content/uploads/2020/04/09/Night-city-background-with-many-building-Graphics-3832790-1.jpg) no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+ 
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vh 5vw;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+.navbar a {
+    position: relative;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.3vw;
+    margin-top: -6vw;
+    padding: 0;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.2vw;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+.logo-img {
+    width: 10vw;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 2vh 2vw;
+    }
+
+    .navbar a {
+        margin: 1vh 0;
+        font-size: 3vw;
+    }
+
+    .logo-img {
+        width: 20vw;
+        margin-top: 2vh;
+    }
+}
+
+.centralizar{
+    display: flex;
+    flex-direction: column; /* Adiciona os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    color: white;
+    min-height: 100vh; /* Altura mínima para ocupar a tela inteira */
+    padding-top: 10vh; /* Espaço no topo para não sobrepor o cabeçalho */
+}
+
+
+
+.meio{
+    background-color: #ffcd05;
+    box-shadow: 10px 30px 60px rgba(113, 115, 119, 0.5);
+    border-radius: 5px;
+    color: #000000;
+    font-size: large;
+    width: 50%;
+    margin-bottom: 2vh; /* Espaço entre os formulários */
+
+}
+
+input{
+    height: 3vh;
+    width: 200px;
+    margin-left: 5px;
+    padding: 5px;
+}
+input[type="text"],input[type="number"]{
+    width: 50%;
+}
+textarea{
+    width: 50%;
+    height: 15vh;
+    margin-left: 5px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+.button:hover{
+    background-color: aqua;
+}
+.botao{
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
+.button1{
+    text-align: center;
+    width: 20%;
+    background-color: #3F375E;
+    color: white;
+}
+.button1:hover{
+    background-color: #6BE9EB;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+

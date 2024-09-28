@@ -1,0 +1,150 @@
+* {
+    /* remove margens */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Define a fonte padrão do site */
+    font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+    /* Define a altura mínima da página */
+    min-height: 100vh;
+    /* Define a imagem de fundo */
+    background: url(https://www.creativefabrica.com/wp-content/uploads/2020/04/09/Night-city-background-with-many-building-Graphics-3832790-1.jpg) no-repeat;
+    /* Faz a imagem cobrir toda a tela, centraliza e fixa */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+    /* Define a posição da logo e da barra de navegação */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vh 5vw;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+    /* Define posição, cor e animação da barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.3vw;
+    margin-top: -6vw;
+    padding: 0;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.2vw;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.logo-img {
+    width: 10vw;
+    height: auto;
+}
+    /* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 2vh 2vw;
+    }
+
+    .navbar a {
+        margin: 1vh 0;
+        font-size: 3vw;
+    }
+
+    .logo-img {
+        width: 20vw;
+        margin-top: 2vh;
+    }
+}
+/* posiciona a caixa */
+.content {
+    margin: 10vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Personalização do titulo */
+.titulo {
+    font-size: 4em;
+    color: #ffcd05;
+    margin-bottom: 2vh;
+    margin-top: -40vh;
+    text-align: center;
+}
+
+/* customização da caixa */
+.box {
+    background-color: rgb(255, 205, 5); /* cor da caixa */
+    color: #000000;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 50vw; /* tamanho da largura da caixa */
+    font-size: 1.3em;
+    margin-bottom: 2vh;
+    margin-top: 10vh; /* ajusta a altura da ciaxa na tela */
+    position: relative;
+    padding-top: 40px;
+}
+
+.logo-caixa {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo-caixa img {
+/* Tamanho do logo */
+    width: 100px;
+    height: auto;
+}
+
+.box p {
+    margin: 0.5vh 0;
+}
+
+.box .info {
+    color: #ffffff; /* cor das informações da caixa */
+}
+/* ajusta a posição da caixa e dos itens de acordo com o tamanho do monitor/tela */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        padding: 4vw;
+    }
+
+    .box p {
+        font-size: 4vw;
+    }
+}

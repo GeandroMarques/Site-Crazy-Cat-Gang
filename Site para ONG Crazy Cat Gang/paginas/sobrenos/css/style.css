@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url(https://www.creativefabrica.com/wp-content/uploads/2020/04/09/Night-city-background-with-many-building-Graphics-3832790-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vh 5vw;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.3vw;
+    margin-top: -6vw;
+    padding: 0;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.2vw;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.logo-img {
+    width: 10vw;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 2vh 2vw;
+    }
+
+    .navbar a {
+        margin: 1vh 0;
+        font-size: 3vw;
+    }
+
+    .logo-img {
+        width: 20vw;
+        margin-top: 2vh;
+    }
+}
+.caixa {
+    border: 5px solid #ffcd05;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #ffcd05;
+    font-size: 120%;
+
+}
+
+.paragrafo {
+    margin-left: 10 px;
+}
+.titulo {
+    font-size: 2rem;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.texto {
+    margin-left: 210px;
+    margin-right: 210px;
+    font-size: larger;
+    text-align: justify;
+    color: aliceblue;
+}
+.caixadois {
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #fff2a6;
+    font-size: 120%;
+
+}
+.textoDOIS {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: larger;
+    text-align: justify;
+    color: black;
+    background-color: #fff2a6;
+}
+.paragrafoCaixa {
+    margin-top: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.imggatinhos {
+    display: flex;
+    justify-content: center;
+    width: 78.5%;
+    height: 78.5%;
+    background-color: #ffcd05;
+    align-items: center;
+    margin: 20px auto;
+}
+.questionario {
+    display: flex;
+    align-items: first baseline;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 40%;
+    height: 40%;
+    padding: 10px;
+}
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.form-container input {
+    flex: 1 1 calc(50% - 20px); 
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #7d5b8c;
+    border-radius: 4px;
+}
+::placeholder {
+    font-size: 1.5em; /* Aumente o valor conforme necessário */
+    color: #7d5b8c; /* Pode também alterar a cor do placeholder */
+}
+.hidden {
+    display: none;
+}

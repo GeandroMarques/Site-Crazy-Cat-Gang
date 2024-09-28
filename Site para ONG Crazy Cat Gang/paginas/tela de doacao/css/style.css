@@ -1,0 +1,157 @@
+* {
+    /* remove margens */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Define a fonte padrão do site */
+    font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+    /* Define a altura mínima da página */
+    min-height: 100vh;
+    /* Define a imagem de fundo */
+    background: url(https://www.creativefabrica.com/wp-content/uploads/2020/04/09/Night-city-background-with-many-building-Graphics-3832790-1.jpg) no-repeat;
+    /* Faz a imagem cobrir toda a tela, centraliza e fixa */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* parte de baixo relacionada aos slides do slideshow */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* .content está relacionado ao slideshow */
+.content {
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* barra de navegção do slideshow */
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+/* estilização da barra de navegação do slideshow */
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .6s;
+}
+/* animação da barra de navegação do slideshow */
+.bar:hover {
+    background-color: #fff;
+}
+/* faz os botoes sumirem */
+input {
+    display: none;
+}
+/*  */
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+/* ajusta o tamanho das imagens  */
+.slide {
+    width: 33.3%;
+    transition: .6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* faz a transição das imagens ao clicar na barra de navegação */
+#slide1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+    margin-left: -33.3%;
+}
+
+#slide3:checked ~ .s1 {
+    margin-left: -66.6%;
+}
+/* Define a posição da logo e da barra de navegação */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vh 5vw;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+/* Define posição, cor e animação da barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.3vw;
+    margin-top: -6vw;
+    padding: 0;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.2vw;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.logo-img {
+    width: 10vw;
+    height: auto;
+}
+    /* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 2vh 2vw;
+    }
+
+    .navbar a {
+        margin: 1vh 0;
+        font-size: 3vw;
+    }
+
+    .logo-img {
+        width: 20vw;
+        margin-top: 2vh;
+    }
+}
